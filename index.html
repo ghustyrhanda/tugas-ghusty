@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kriptografi MD5 - Gusti Rhanda</title>
+    <link rel="stylesheet" href="sty">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>GUSTI RHANDA</h1>
+            <h2>SISTEM KRIPTOGRAFI MD5</h2>
+            <p>Aplikasi Hashing dan Verifikasi MD5</p>
+        </header>
+
+        <div class="identitas">
+            <h3>Identitas Mahasiswa</h3>
+            <p>Nama: Gusti Rhanda</p>
+            <p>NIM:104250071</p>
+            <p>Bahasa Pemrograman: Python</p>
+            <p>Algoritma: MD5</p>
+        </div>
+
+        <div class="card">
+            <h2>Enkripsi / Hashing MD5</h2>
+
+            <form method="POST">
+
+                <label>Masukkan Teks</label>
+                <textarea name="teks" placeholder="Masukkan teks..." required>{{ teks }}</textarea>
+
+                <button type="submit" name="aksi" value="generate">
+                    Generate MD5
+                </button>
+
+                {% if hasil %}
+                <div class="hasil">
+                    <h3>Hasil Hash MD5</h3>
+                    <p>{{ hasil }}</p>
+                </div>
+                {% endif %}
+
+                <label>Masukkan Hash MD5 untuk Verifikasi</label>
+                <input type="text" name="hash_input" placeholder="Masukkan hash MD5">
+
+                <button type="submit" name="aksi" value="verify">
+                    Verifikasi MD5
+                </button>
+
+                {% if pesan %}
+                <div class="hasil">
+                    <p>{{ pesan }}</p>
+                </div>
+                {% endif %}
+
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Deskripsi Sistem</h2>
+            <p>
+                Sistem Kriptografi MD5 merupakan aplikasi yang
+                menggunakan algoritma Message Digest 5 untuk
+                menghasilkan nilai hash dari suatu teks.
+            </p>
+            <p>
+                MD5 menghasilkan nilai hash sepanjang 128-bit
+                atau 32 karakter heksadesimal. MD5 merupakan
+                proses hashing satu arah dan tidak dapat
+                dikembalikan ke teks aslinya.
+            </p>
+        </div>
+
+        <footer>
+            <p>© 2026 - Sistem Kriptografi MD5</p>
+            <p>Dibuat oleh Gusti Rhanda</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
